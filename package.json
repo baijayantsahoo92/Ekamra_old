@@ -1,14 +1,28 @@
 {
   "name": "ekamra-medical-concierge",
   "version": "1.0.0",
+  "description": "Ekamra Medical Concierge Node.js website",
   "private": true,
-  "type": "module",
+  "main": "server.js",
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "npm run test",
+    "test": "node --check server.js && node --check src/content.js"
   },
-  "devDependencies": {
-    "vite": "^7.2.4"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20 <25",
+    "npm": ">=10"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "helmet": "^8.2.0",
+    "morgan": "^1.11.0"
   }
 }
